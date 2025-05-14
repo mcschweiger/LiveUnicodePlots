@@ -1,0 +1,13 @@
+name = "LiveUnicodePlots"
+uuid = "9244542a-2e93-4bb9-a79d-5b58e6373ec9"
+authors = ["Max Schweiger <mcschwei@asu.edu>"]
+version = "0.1.0"
+
+[deps]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+UnicodePlots = "b8865327-cd53-5732-bb35-84acbb429228"
+
+[compat]
+Test = "1.11.0"
+UnicodePlots = "3.7.2"
+julia = "1.11"
