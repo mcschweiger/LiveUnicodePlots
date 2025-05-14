@@ -68,21 +68,21 @@ Live-updating in-place Unicode plot of `sampler.meta[:lp]`.
 - `pl_len`: number of recent points to show (or `nothing` for all)
 - `sampler_funcs`: context for header: what's being sampled `Vector{Functions}`
 """
-function live_lp_plot(meta::Dict{Symbol, Any}, delay = 0.01f0, pl_len = 100)
+function live_lp_plot(meta::Dict{Symbol, Any};  delay = 0.1f0, window::Int = 100)
 
     last_print_time = time()
 
     println("Live Log-Posterior Monitor:")
 
 
-    pl_len = 100
+    
     lp = meta[:lp]
 
     nsteps = length(lp)
     @assert nsteps > 0
     T  = meta[:temperature]
     Δlp = lp[end] - maximum(lp[1:end-1])
-    lp_toplot = lp[end - min(length(lp), pl_len) + 1:end]
+    lp_toplot = lp[end - min(length(lp), window) + 1:end]
 
 
     # only replot if enough time has passed or Δlp changed
