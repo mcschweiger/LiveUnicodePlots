@@ -1,5 +1,5 @@
 # LiveUnicodePlots are here !
-
+(really, just a thin wrapper for UnicodePlots)
 ## Usage Example
 ```julia
 # Initialize a fake metadata dict
@@ -36,6 +36,6 @@ wait(producer_task)
 end runflag
 ```
 
-Please see [UnicodePlots.jl](https://github.com/JuliaPlots/UnicodePlots.jl) for info on plotting routines in the REPL.
+Please see [UnicodePlots.jl](https://github.com/JuliaPlots/UnicodePlots.jl) for info on plotting with text.
 
 For your own use case, calling `@live_unicode_monitor` and defining a conditional trigger will grab current cursor location. On triggering, run the code block. Stop monitoring the trigger on `runflag[] = false`.
